@@ -8,8 +8,8 @@
             <div class="card shadow-lg border-0 mt-5">
                 <div class="card-body p-5">
                     <div class="text-center mb-4">
-                        <h3 class="fw-bold text-primary">Create Account</h3>
-                        <p class="text-muted">Start managing your clients today</p>
+                        <h3 class="fw-bold text-primary">Welcome Back</h3>
+                        <p class="text-muted">Sign in to manage your clients</p>
                     </div>
 
                     <form method="post" autocomplete="off">
@@ -17,12 +17,12 @@
                         {{ form|crispy }}
 
                         <button type="submit" class="btn btn-primary w-100 py-3 rounded-pill fw-bold mt-4 auth-btn">
-                            Create Account
+                            Sign In
                         </button>
                     </form>
 
                     <div class="text-center mt-4">
-                        <p class="text-muted mb-0">Already have an account? <a href="{% url 'login' %}" class="text-decoration-none fw-bold auth-link">Sign In</a></p>
+                        <p class="text-muted mb-0">Don't have an account? <a href="{% url 'register' %}" class="text-decoration-none fw-bold auth-link">Create Account</a></p>
                     </div>
                 </div>
             </div>
