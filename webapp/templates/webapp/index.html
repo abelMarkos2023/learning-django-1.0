@@ -1,6 +1,46 @@
 {% extends 'webapp/base.html' %}
 
 {% block content %}
-    <h1>Welcome to the course</h1>
+<div class="container py-5">
+    <div class="row align-items-center py-5">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="display-3 fw-bold mb-4 text-primary">
+                Modern CRM for <br><span class="text-secondary">Your Business</span>
+            </h1>
+            <p class="lead text-muted mb-4 fs-4">
+                Manage customer relationships, track leads, and grow your sales with our intuitive and powerful CRM platform.
+            </p>
+            <div class="d-flex gap-3">
+                <a href="{% url 'register' %}" class="btn btn-primary btn-lg rounded-pill px-5 py-3 fw-bold shadow">
+                    Get Started Free
+                </a>
+                <a href="#" class="btn btn-outline-secondary btn-lg rounded-pill px-5 py-3 fw-bold">
+                    Learn More
+                </a>
+            </div>
+            <div class="mt-5 d-flex align-items-center gap-4 text-muted small">
+                <div><i class="bi bi-check-circle-fill text-success me-2"></i>No credit card required</div>
+                <div><i class="bi bi-check-circle-fill text-success me-2"></i>14-day free trial</div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="position-relative">
+                <div class="bg-primary opacity-10 position-absolute w-100 h-100 rounded-5" style="transform: rotate(-3deg); top: 20px; left: 20px; z-index: -1;"></div>
+                <div class="card border-0 shadow-lg rounded-5 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="CRM Dashboard Preview">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .text-secondary { color: #adb5bd !important; }
+    .opacity-10 { opacity: 0.15; }
+    .display-3 { letter-spacing: -1px; }
+    
+    [data-bs-theme="dark"] .text-muted { color: #adb5bd !important; }
+    [data-bs-theme="dark"] .text-secondary { color: #ced4da !important; }
+</style>
 {% endblock %}
 

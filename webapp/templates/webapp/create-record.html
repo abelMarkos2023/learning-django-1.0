@@ -1,0 +1,54 @@
+{% extends "webapp/base.html" %}
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container p-4">
+    <div class="d-flex justify-content-between">
+        <div class="col-md-6">
+            Create New record
+        </div>
+         <div class="col-md-6">
+            <a href="{% url 'dashboard' %}" class="btn btn-secondary">Back</a>
+        </div>
+        </div>
+        <form  method="POST" enctype="multipart/form-data" class="p-3 m-3">
+            {% csrf_token %}
+            
+            {{ form.first_name|as_crispy_field }}
+
+            <br>
+            {{ form.last_name|as_crispy_field }}
+
+            <br>
+            {{ form.email|as_crispy_field }}
+
+            <br>
+            {{ form.phone|as_crispy_field }}
+
+            {{ form.address|as_crispy_field }}
+
+            <br>
+
+            <br>
+            {{ form.city|as_crispy_field }}
+
+            <br>
+            {{ form.provinace|as_crispy_field }}
+
+            <br>
+            {{ form.country|as_crispy_field }}
+
+            <br>
+            
+
+            <button type="submit" class="btn btn-primary btn-block m-3">
+                Add record
+            </button>
+        </form>
+</div>
+    
+
+{% endblock %}
